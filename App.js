@@ -18,7 +18,7 @@ const App = () => {
   return (
     <SafeAreaProvider>
       <View style={styles.container}>
-        <Button title="Press ME" onPress={() => setOverlay(true)} />
+        <Button title="SEND" onPress={() => setOverlay(true)} />
         <Overlay overlayStyle={styles.overlay} isVisible={overlay} onBackdropPress={() => setOverlay(false)}>
           <View>
             <Text style={styles.title}>Confirmation</Text>
@@ -47,7 +47,7 @@ const App = () => {
               }  
               onChangeText={e => setPassword(e)}
             />
-            <Button style={styles.sendBtn} title="Send" />
+            <Button buttonStyle={{backgroundColor: '#00A585'}} title="Send" onPress={() => {}} />
           </View>
         </Overlay>
       </View>
@@ -92,9 +92,6 @@ const styles = StyleSheet.create({
   },
   icon: {
     marginHorizontal: 10,
-  },
-  sendBtn: {
-    backgroundColor: '#fff',
   }
 })
 
