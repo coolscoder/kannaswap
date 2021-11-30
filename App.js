@@ -1,11 +1,5 @@
 import React, { useState } from 'react'
-import {
-  SafeAreaView,
-  ScrollView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import { Button, Input, Overlay } from 'react-native-elements'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import Icon from 'react-native-vector-icons/FontAwesome';
@@ -24,6 +18,7 @@ const App = () => {
             <Text style={styles.title}>Confirmation</Text>
             <Text style={styles.description}>Input your password for security reason so we can transfer the money</Text>
             <Input
+              value={password}
               label="password"
               labelStyle={styles.inputLabel}
               placeholder='Type Password'
